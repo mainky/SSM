@@ -1,7 +1,6 @@
 package com.ky.service.impl;
 
 import com.ky.dao.UserDao;
-import com.ky.dao.mapper.UserMapper;
 import com.ky.entity.User;
 import com.ky.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +19,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao userDao;
 
-    @Autowired
-    private UserMapper userMapper;
-
     @Override
     public User selectUser(Long userId) {
         return userDao.selectUser(userId);
@@ -30,6 +26,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> selectAll() {
-        return userMapper.selectAll();
+        return userDao.selectAll();
     }
 }

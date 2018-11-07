@@ -3,12 +3,12 @@ package com.ky.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ky.entity.User;
 import com.ky.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -23,7 +23,7 @@ import java.util.List;
 @RequestMapping("/user/")
 public class UserController {
 
-    @Resource
+    @Autowired
     private UserService userService;
 
     @RequestMapping("showUser")
