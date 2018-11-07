@@ -1,8 +1,4 @@
 package com.ky.dao;
-/**
- * @author kangyang
- * @date 2018/9/27 19:32
- */
 
 import com.ky.entity.User;
 import org.apache.ibatis.annotations.Select;
